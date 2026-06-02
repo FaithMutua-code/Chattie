@@ -38,6 +38,7 @@ function CustomTabBar({ state, descriptors, navigation }: any) {
           const iconMap: Record<string, { active: any; inactive: any }> = {
             index:      { active: 'home',         inactive: 'home-outline' },
             feedScreen: { active: 'grid',          inactive: 'grid-outline' },
+            messages:   { active: 'chatbubbles',   inactive: 'chatbubbles-outline' },
             profile:    { active: 'person',        inactive: 'person-outline' },
             settings:   { active: 'settings',      inactive: 'settings-outline' },
           };
@@ -103,6 +104,13 @@ export default function TabLayout() {
           options={{ 
             title: 'Items',
             tabBarLabel: 'Items'
+          }} 
+        />
+        <Tabs.Screen 
+          name="messages"   
+          options={{ 
+            title: 'Messages',
+            tabBarLabel: 'Messages'
           }} 
         />
         <Tabs.Screen 

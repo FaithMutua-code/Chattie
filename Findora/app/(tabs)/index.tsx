@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import { AuthContext } from '@/utils/AuthContext';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { useTheme } from '@/utils/ThemeContext';
 

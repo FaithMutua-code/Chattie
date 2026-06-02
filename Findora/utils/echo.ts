@@ -1,6 +1,6 @@
 import Echo from 'laravel-echo';
 import Pusher from 'pusher-js/react-native';
-import {API_URL, REVERB_KEY } from '@/config';
+import {API_URL, REVERB_KEY } from '../config';
 // @ts-ignore
 (global as unknown as Record<string, unknown>).Pusher = Pusher;
 

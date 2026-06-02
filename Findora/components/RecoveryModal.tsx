@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
-import { API_URL } from '@/config';
+import { API_URL } from '../config';
 import { useTheme } from '@/utils/ThemeContext';
 
 const PURPLE = '#6C5CE7';

@@ -12,7 +12,7 @@ import {
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import { AuthContext } from '@/utils/AuthContext';
-import {API_URL } from '@/config';
+import { API_URL } from '../../config';
 
 export default function EditProfileScreen() {
   const router = useRouter();

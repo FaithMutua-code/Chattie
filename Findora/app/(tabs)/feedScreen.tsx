@@ -8,7 +8,7 @@ import axios from 'axios';
 import { AuthContext } from '../../utils/AuthContext';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import * as Linking from 'expo-linking';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { StatusBar } from 'expo-status-bar';

@@ -6,7 +6,7 @@ import {
 import { useRouter } from 'expo-router';
 import { AuthContext } from '../../utils/AuthContext';
 import axios from 'axios';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '@/utils/ThemeContext';
 

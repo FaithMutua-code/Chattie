@@ -11,7 +11,7 @@ import { createEcho } from '../../utils/echo';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Notifications from 'expo-notifications';
 import { StatusBar } from 'expo-status-bar';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import { useTheme } from '@/utils/ThemeContext';
 
 Notifications.setNotificationHandler({

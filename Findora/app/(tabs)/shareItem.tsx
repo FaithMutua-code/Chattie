@@ -12,7 +12,7 @@ import { AuthContext } from '../../utils/AuthContext';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import { useTheme } from '@/utils/ThemeContext';
 
 const CATEGORIES = [

@@ -3,10 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Item extends Model
 {
-    protected $fillable =[
+    use HasFactory;
+    protected $fillable = [
         'user_id',
         'title',
         'description',
@@ -23,8 +24,8 @@ class Item extends Model
         'recovered_at',
         'recovered_by',
     ];
-   public function user()
-   {
-    return $this->belongsTo(User::class);
-   } 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

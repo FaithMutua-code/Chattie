@@ -86,4 +86,49 @@ class MessageController extends Controller
             ], 500);
         }
     }
+
+    public function conversations()
+    {
+        try {
+            $user = Auth::guard('api')->user();
+
+            if (!$user) {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+
+            $authId = $user->id;
+
+            // Get the latest message for each conversation
+            $conversations = Message::where('sender_id', $authId)
+                ->orWhere('receiver_id', $authId)
+                ->with(['sender', 'receiver'])
+                ->orderBy('created_at', 'desc')
+                ->get()
+                ->unique(function ($message) use ($authId) {
+                    return $message->sender_id == $authId ? $message->receiver_id : $message->sender_id;
+                });
+
+            $formattedConversations = $conversations->map(function ($message) use ($authId) {
+                $otherUser = $message->sender_id == $authId ? $message->receiver : $message->sender;
+                return [
+                    'other_user' => $otherUser,
+                    'last_message' => [
+                        'message' => $message->message,
+                        'created_at' => $message->created_at,
+                        'type' => $message->type,
+                        'is_read' => $message->is_read,
+                    ],
+                ];
+            })->values();
+
+            return response()->json($formattedConversations);
+
+        } catch (\Exception $e) {
+            Log::error('Conversations fetch error: ' . $e->getMessage());
+            return response()->json([
+                'error'   => 'Failed to fetch conversations',
+                'message' => $e->getMessage(),
+            ], 500);
+        }
+    }
 }

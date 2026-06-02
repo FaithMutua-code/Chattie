@@ -8,7 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import axios from 'axios';
 import * as Linking from 'expo-linking';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import { AuthContext } from '@/utils/AuthContext';
 import { useTheme } from '@/utils/ThemeContext';
 import { SafeAreaView } from 'react-native-safe-area-context';

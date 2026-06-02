@@ -9,7 +9,7 @@ import { AuthContext } from '../../utils/AuthContext';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google';
 import { Ionicons } from '@expo/vector-icons';
-import { EXPO_CLIENT_ID, API_URL } from '@/config';
+import { EXPO_CLIENT_ID, API_URL } from '../../config';
 import { useTheme } from '@/utils/ThemeContext';
 
 WebBrowser.maybeCompleteAuthSession();

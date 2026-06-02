@@ -8,7 +8,7 @@ import {
 import { useRouter } from 'expo-router';
 import axios from 'axios';
 import { Ionicons } from '@expo/vector-icons';
-import { API_URL } from '@/config';
+import { API_URL } from '../../config';
 import { useTheme } from '@/utils/ThemeContext';
 
 const PURPLE = '#6C5CE7';
